@@ -21,5 +21,5 @@ The following information will be written in the report:<br /><br />
 <sub>***To prevent your program from overwriting the same JSON file, name it with the ‘program run’ date*** (use datetime module).
 (Once the project is complete, send the report in JSON).</sub>
 
-[^1]: [Click here](https://www.figma.com/file/JlmizyQeC6dW1Y5WetGrlU/Python-Project%3A-Flowchart?node-id=0%3A1) to see the complete flowchart
+[^1]: Click [here](https://www.figma.com/file/JlmizyQeC6dW1Y5WetGrlU/Python-Project%3A-Flowchart?node-id=0%3A1) to see the complete flowchart of the project (*realized with Figma*)
 [^2]: (the top 20 according to the CoinMarketCap default ranking, therefore sorted by capitalization)
