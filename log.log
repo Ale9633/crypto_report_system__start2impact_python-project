@@ -1,4 +1,11 @@
-2022-08-26 14:26:06,163 - INFO - info
-2022-08-26 14:26:06,163 - WARNING - warning
-2022-08-26 14:26:06,164 - ERROR - error
-2022-08-26 14:26:06,164 - CRITICAL - critical
+2022-08-27 21:54:19,666 - INFO - info
+2022-08-27 21:54:19,666 - WARNING - warning
+2022-08-27 21:54:19,666 - ERROR - error
+2022-08-27 21:54:19,666 - CRITICAL - critical
+2022-08-27 21:54:22,841 - ERROR - Unable to create a file, coz the file already exists: 'docs'
+Traceback (most recent call last):
+  File "C:\Users\alena\OneDrive\Desktop\progetto_python_di_alessio_nava\script.py", line 176, in report_settings
+    os.makedirs(destination_dir)
+  File "C:\Users\alena\AppData\Local\Programs\Python\Python39\lib\os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [WinError 183] Impossibile creare un file, se il file esiste già: 'C:\\Users\\alena\\OneDrive\\Desktop\\progetto_python_di_alessio_nava\\CoinMarketCap JSON Reports'
