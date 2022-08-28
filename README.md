@@ -3,12 +3,12 @@
 </p>
 
 <h1 align="center">Start2impact: Python project</h1>
-<h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API :desktop_computer: </h3><br />
+<h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API 🖥️</h3><br />
 
 <h2>📝Tasks</h2>
-Every day, at a certain specific time, we wanna get as much information as possible about cryptocurrencies, process it and store the results in a JSON file.
+Every day, at a certain specific time, we wanna get as much information as possible about cryptocurrencies, process it and store the results in a JSON file.<br /><br /><br />
 
-The following information will be written in the report:<br /><br />
+The following information will be written in the report:<br />
 
 1) **The Crypto with the largest volume** *(in $)* of the last 24 hours.
 
@@ -26,9 +26,7 @@ The following information will be written in the report:<br /><br />
 Once the project is complete, **send the report in JSON.**<br />
 <sub>*To prevent your program from overwriting the same JSON file, name it with the ‘program run’ date (use datetime module).*</sub><br /><br /><br />
 
-<h2>🧑🏻‍💻How I worked on</h2>[^2]<br />
-> Creativity is intelligence having fun
-
+## 🧑🏻‍💻How I worked on[^2]<br />
 
 
 
