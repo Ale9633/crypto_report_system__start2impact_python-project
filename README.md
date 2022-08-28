@@ -5,6 +5,8 @@
 <h1 align="center">Start2impact: Python project</h1>
 <h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API 🖥️</h3><br />
 
+
+
 <h2>📝Tasks</h2>
 Every day, at a certain specific time, we wanna get as much information as possible about cryptocurrencies, process it and store the results in a JSON file.<br /><br /><br />
 
@@ -21,12 +23,17 @@ The following information will be written in the report:<br />
 5) **Profit/loss %** you would have made if you had bought one unit of each of the top 20 cryptocurrencies the day before (assuming that the rankings have not changed).<br /><br />
 
 
-
-
 Once the project is complete, **send the report in JSON.**<br />
 <sub>*To prevent your program from overwriting the same JSON file, name it with the ‘program run’ date (use datetime module).*</sub><br /><br /><br />
 
+
+
+
+
 ## 🧑🏻‍💻How I worked[^2]<br />
+<img width="2906" alt="Python Project_ Flowchart" src="https://user-images.githubusercontent.com/91788111/187067341-2e1ead2e-532b-4605-af0c-7a291fec8e3a.png">
+
+
 
 
 
