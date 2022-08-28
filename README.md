@@ -208,7 +208,12 @@ Key data:<br />
 
 
 
+
 #### 4️⃣$ amount (all crypto with volume > 76.000.000$)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91788111/187085096-32aa0f8c-46ef-40f2-b37e-c5d32c8ef58e.png" width="90%" height="250"/>
+</p>
+
 ```python
     def dollar_per_all(self):
         amount = 0
@@ -227,11 +232,24 @@ Key data:<br />
         return round(amount, 2)
 ```
 <br />
+Key data:<br />
+
+- ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
+- ***start:*** Optionally offset the start (1-based index) of the paginated list of items to return.[^4]
+- ***limit:*** Optionally specify the number of results to return. Use this parameter and the "start" parameter to determine your own pagination size.[^5]
+- ***sort:*** What field to sort the list of cryptocurrencies by.[^6]
+- ***volume_24h_min:*** Optionally specify a threshold of minimum 24 hour USD volume to filter results by.[^9]
+<br />
+
 
 
 
 
 #### 5️⃣% profit/loss timedelta=1 (each top 20 crypto)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91788111/187085309-f8771417-c96e-44aa-9d56-bceee6cf40f1.png" width="90%" height="250"/>
+</p>
+
 ```python
     def profit_loss_yesterday(self):
         yesterday_amount = 0
@@ -253,6 +271,15 @@ Key data:<br />
         profit_loss = round(((today_amount - yesterday_amount) / yesterday_amount) * 100, 1)
         return profit_loss
 ```
+<br />
+Key data:<br />
+
+- ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
+- ***start:*** Optionally offset the start (1-based index) of the paginated list of items to return.[^4]
+- ***limit:*** Optionally specify the number of results to return. Use this parameter and the "start" parameter to determine your own pagination size.[^5]
+- ***sort:*** What field to sort the list of cryptocurrencies by.[^6]
+- ***sort_dir:*** The direction in which to order cryptocurrencies against the specified sort.[^7]
+<br />
 
 
 
@@ -280,3 +307,4 @@ Key data:<br />
 [^6]: *valid values: "name""symbol" | "date_added" | "market_cap" | "market_cap_strict" | "price""circulating_supply" | "total_supply" | "max_supply" | "num_market_pairs" | "volume_24h""percent_change_1h" | "percent_change_24h" | "percent_change_7d" | "market_cap_by_total_supply_strict" | "volume_7d""volume_30d" (default = 'market_cap')*
 [^7]: *valid values: "asc" | "desc"*
 [^8]: *number >= -100*
+[^9]: *number [ 0 .. 100000000000000000 ]*
