@@ -26,7 +26,7 @@ The following information will be written in the report:<br />
 Once the project is complete, **send the report in JSON.**<br />
 <sub>*To prevent your program from overwriting the same JSON file, name it with the ‘program run’ date (use datetime module).*</sub><br /><br /><br />
 
-## 🧑🏻‍💻How I worked on[^2]<br />
+## 🧑🏻‍💻How I worked[^2]<br />
 
 
 
