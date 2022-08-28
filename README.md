@@ -401,7 +401,7 @@ This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
 ```
 <br /><br /><br />
 **Our journey is come to an end.**<br />
-**I hope you enjoy my work.
+**I hope you enjoyed my work.
 <br /><br />Thnx for reading me!** 🙏🏼<br /><br />
 <br />***Ale***<br /><br />
 
