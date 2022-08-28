@@ -61,7 +61,7 @@ class CoinmarketcapApi:
 
 
 <br /><br />
-Awesome!🚀<br />
+**Awesome!** 🚀<br />
 Once the live production environment is set up, let's create the class ***'GetCurrencies'*** which will cointain all functions of the program:<br />
 
 
@@ -399,18 +399,23 @@ This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
         report_settings(report.conversion)
         time.sleep(standby)
 ```
-<br /><br /><br /><br />
-Our journey is come to an end.<br />
-I hope you enjoy my work!<br /><br />
+<br /><br /><br />
+**Our journey is come to an end.**<br />
+**I hope you enjoy my work.
+<br /><br />Thnx for reading me!** 🙏🏼<br /><br />
+<br />***Ale***<br /><br />
 
 
 
 
 
-<a href="https://www.linkedin.com/in/alessio-nava/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091662-1562be4f-603d-483e-8cd0-d6fd034bd9cb.png" width="30" height="30"/></a>
-<a href="https://www.instagram.com/_novalex_/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091653-fd2fed12-3776-4211-a8ef-49d10e33cec7.png" width="30" height="30"/></a>
-<a href="https://twitter.com/Novalex__" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091572-a0379d91-f0c5-40a0-abd3-cc72ca157b2f.png" width="30" height="30"/></a>
-<br />
+
+
+
+<a href="https://www.linkedin.com/in/alessio-nava/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187092525-3397401d-02b5-4e4c-87cc-11ff3594839b.png"/></a>
+<a href="https://www.instagram.com/_novalex_/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187092563-1f92a775-609a-4086-8bb5-8c246b1af2cd.png"/></a>
+<a href="https://twitter.com/Novalex__" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187092483-ba687557-8e98-4afc-ab98-59958493c435.png"/></a>
+<br /><br /><br />
 
 
 
