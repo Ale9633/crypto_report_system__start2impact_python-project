@@ -246,7 +246,7 @@ Key data:<br />
 - ***start:*** Optionally offset the start (1-based index) of the paginated list of items to return.[^4]
 - ***limit:*** Optionally specify the number of results to return. Use this parameter and the "start" parameter to determine your own pagination size.[^5]
 - ***sort:*** What field to sort the list of cryptocurrencies by.[^6]
-- ***volume_24h_min:*** Optionally specify a threshold of minimum 24 hour USD volume to filter results by.[^9]
+- ***volume_24h_min:*** Optionally specify a threshold of minimum 24h USD volume to filter results by.[^9]
 <br />
 
 
