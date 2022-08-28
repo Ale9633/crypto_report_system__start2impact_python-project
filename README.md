@@ -238,7 +238,7 @@ Key data:<br />
         return round(amount, 2)
 ```
 
-> The amount of $ per unit of all Crypto in CoinMarketCap with a $76000000 threshold of minimum volume in the last 24h
+> The amount of $ per unit of all Crypto in CoinMarketCap with a $76.000.000 threshold of minimum volume in the last 24h
 
 Key data:<br />
 
@@ -280,7 +280,7 @@ Key data:<br />
         return profit_loss
 ```
 
-> % Profit/loss buying one of each top 20 Crypto both today and yesterday (assuming the same rank)
+> % Profit/loss buying one of each top 20 Crypto both today and yesterday *(assuming the same rank)*
 
 Key data:<br />
 
@@ -322,7 +322,7 @@ Finally it's possible to close data class ***GetCurrencies()***: let's create a 
 
 
 
-Last but not least: Create a function with *‘os.path’* module to build the complete JSON report ***(the file name is gonna be always as equal as the datetime.now() object)***...[^11]
+Last but not least: create a function with *‘os.path’* module to build the complete JSON report ***(the file name is gonna be always as equal as the datetime.now() object)***...[^11]
 
 ```python
 def report_settings(report):
@@ -367,11 +367,44 @@ def report_settings(report):
 
 
 <h2>Display report overview🖥️</h2>
+There we go! There is a bunch of things here, thus I decided to set a recap code of JSON output to close the whole project:<br /><br />
+
+```python
+def display():
+    # Run and display a recap of the GetCurrencies class
+    seconds = 60
+    minutes = 60
+    hours = 24
+    standby = (seconds * minutes) * hours
+
+    while True:
+        report = GetCurrencies()
+
+        print(f"""Hi there! {emoji.emojize(":waving_hand:")}
+This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
+    {emoji.emojize(":calendar:")} --> {datetime.now().strftime("%Y-%m-%d")}
+    {emoji.emojize(":eight_o’clock:")} --> {datetime.now().strftime("%H:%M:%S")}
+\nLet's get into it!
+\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\n\nThis is the top 20 Crypto in order of CoinMarketCap's market cap rank: {report.conversion["Top 20 market cap rank"]}\n\n
+\n1) Crypto with the $ largest volume of the last 24 hours: {report.conversion["Best volume 24h"]["symbol"]}
+\n2) Best top 10 Crypto % increase in the last 24 hours: {report.conversion["Best % increment 24h"]}
+   Worst top 10 Crypto % increase in the last 24 hours: {report.conversion["Worst % increment 24h"]}
+\n3) The amount of $ per unit of each top 20 Crypto: {report.conversion["$ per Top 20 Crypto"]}$
+\n4) The amount of $ per unit of all Crypto in CoinMarketCap with a $76000000 threshold of minimum volume in the last 24h: {report.conversion["$ per Crypto with 76.000.000 volume min threshold 24h"]}$
+\n5) % Profit/loss buying one of each top 20 Crypto both today and yesterday (assuming the same rank): {report.conversion["Profit/loss timedelta = 1"]}%
+\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\n\n*** Start2impact Python Project, made with {emoji.emojize(":red_heart:")}By Alessio Nava ***\n\n""")
+
+        report_settings(report.conversion)
+        time.sleep(standby)
+```
+<br /><br /><br /><br /><br /><br />
+Our journey is come to an end.<br />
+I hope you enjoy my work!<br /><br />
 
 
-
-
-
+<br /><br /><br /><br />
 
 
 
