@@ -30,8 +30,9 @@ Once the project is complete, **send the report in JSON.**<br />
 
 
 
-## 🧑🏻‍💻How I worked[^2]<br />
+## 🧑🏻‍💻How I worked<br />
 <img width="2906" alt="Python Project_ Flowchart" src="https://user-images.githubusercontent.com/91788111/187067341-2e1ead2e-532b-4605-af0c-7a291fec8e3a.png"><br />
+<sub>*Click **[here](https://www.figma.com/file/JlmizyQeC6dW1Y5WetGrlU/Python-Project%3A-Flowchart?node-id=0%3A1)** to see the complete flowchart of the project (*realized with Figma*)*</sub><br /><br />
 > **The CoinMarketCap API** is a suite of **high-performance RESTful JSON** endpoints that are specifically designed to meet the mission-critical demands of application developers, data scientists, and enterprise business platforms.
 
 <br />Let's start connecting our *"script.py"* file to CoinMarketCap...[^3]
@@ -399,6 +400,7 @@ This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
         report_settings(report.conversion)
         time.sleep(standby)
 ```
+<sub>*Click **[here](https://github.com/Ale9633/crypto_report_system__start2impact_python-project/blob/master/img/report_overview.png)** to see a screenshot of the code output*</sub>
 <br /><br /><br />
 **Our journey is come to an end.**<br />
 **I hope you enjoyed my work.
