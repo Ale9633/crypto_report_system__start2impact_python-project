@@ -202,6 +202,11 @@ Once the live production environment is set up, now let's move on to tasks, crea
 
 
 
+
+
+
+
+
 [^1]: (the top 20 according to the CoinMarketCap default ranking, therefore sorted by capitalization)
 [^2]: Click [here](https://www.figma.com/file/JlmizyQeC6dW1Y5WetGrlU/Python-Project%3A-Flowchart?node-id=0%3A1) to see the complete flowchart of the project (*realized with Figma*)
 [^3]: {'X-CMC_PRO_API_KEY': 'YOUR_COINMARKETCAP_API_KEY'} --> put your **private key** as ***'value'*** of 'X-CMC_PRO_API_KEY'
