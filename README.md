@@ -1,3 +1,8 @@
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91788111/187063710-e977356b-a0ec-4f89-85f1-db087101ff3d.jpg" width="350" height="300"/>
+</p>
+
+
 # Start2impact: Python project
 ### Create a Crypto reporting system, using CoinMarketCap’s API :desktop_computer:[^1]<br /><br />
 
