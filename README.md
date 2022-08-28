@@ -171,7 +171,7 @@ Key data:<br />
 - ***limit:*** Optionally specify the number of results to return. Use this parameter and the "start" parameter to determine your own pagination size.[^5]
 - ***sort:*** What field to sort the list of cryptocurrencies by.[^6]
 - ***sort_dir:*** The direction in which to order cryptocurrencies against the specified sort.[^7]
-- ***percent_change_24h_min***: Optionally specify a threshold of minimum 24 hour percent change to filter results by.[^8]
+- ***percent_change_24h_min***: Optionally specify a threshold of minimum 24h percent change to filter results by.[^8]
 <br />
 
 
