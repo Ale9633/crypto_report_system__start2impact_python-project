@@ -31,9 +31,10 @@ Once the project is complete, **send the report in JSON.**<br />
 
 
 ## 🧑🏻‍💻How I worked[^2]<br />
-<img width="2906" alt="Python Project_ Flowchart" src="https://user-images.githubusercontent.com/91788111/187067341-2e1ead2e-532b-4605-af0c-7a291fec8e3a.png"><br /><br />
+<img width="2906" alt="Python Project_ Flowchart" src="https://user-images.githubusercontent.com/91788111/187067341-2e1ead2e-532b-4605-af0c-7a291fec8e3a.png"><br />
+> **The CoinMarketCap API** is a suite of **high-performance RESTful JSON** endpoints that are specifically designed to meet the mission-critical demands of application developers, data scientists, and enterprise business platforms.
 
-Let's Start connecting our *"script.py"* file to CoinMarketCap...[^3]
+<br />Let's start connecting our *"script.py"* file to CoinMarketCap...[^3]
 ```python
 class CoinmarketcapApi:
     """Connecting to CoinMarketCap"""
@@ -58,10 +59,32 @@ class CoinmarketcapApi:
         return r["data"]
 ```
 
-<br />
-Awesome!🚀<br />
-Once the live production environment is set up, now let's move on to tasks, creating a different report for each of them.<br /><br />
 
+<br /><br />
+Awesome!🚀<br />
+Once the live production environment is set up, let's create the class ***'GetCurrencies'*** which will cointain all functions of the program:<br />
+
+
+```python
+class GetCurrencies(CoinmarketcapApi):
+    """Create different reports for different tasks"""
+
+    def __init__(self):
+        super().__init__()
+        ...
+```
+Now link all functions and 📦 them in ***GetCurrencies()*** with the One that creates the JSON final report.
+```python
+        ...
+        self.conversion = self.to_json()
+```
+
+
+<br /><br />
+OK! Everything works well...<br />
+It's time to move on to tasks and fetch data, grouping them according to the project requests above.<br />
+**Take it away**🔥
+<br /><br />
 
 
 
@@ -84,7 +107,13 @@ Once the live production environment is set up, now let's move on to tasks, crea
         output = self.fetch_currencies_data()
         return output[0]
 ```
+<br />
+Key data:<br />
 
+- ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
+- ***start:*** Optionally offset the start (1-based index) of the paginated list of items to return.[^4]
+- ***limit:*** Optionally specify the number of results to return. Use this parameter and the "start" parameter to determine your own pagination size.[^5]
+- ***sort:*** What field to sort the list of cryptocurrencies by.[^6]
 
 
 
@@ -119,6 +148,7 @@ Once the live production environment is set up, now let's move on to tasks, crea
         output = self.fetch_currencies_data()
         return output
 ```
+<br />
 
 
 
@@ -140,6 +170,7 @@ Once the live production environment is set up, now let's move on to tasks, crea
             amount += crypto["quote"]["USD"]["price"]
         return round(amount, 2)
 ```
+<br />
 
 
 
@@ -162,6 +193,7 @@ Once the live production environment is set up, now let's move on to tasks, crea
             amount += crypto["quote"]["USD"]["price"]
         return round(amount, 2)
 ```
+<br />
 
 
 
@@ -210,3 +242,6 @@ Once the live production environment is set up, now let's move on to tasks, crea
 [^1]: (the top 20 according to the CoinMarketCap default ranking, therefore sorted by capitalization)
 [^2]: Click [here](https://www.figma.com/file/JlmizyQeC6dW1Y5WetGrlU/Python-Project%3A-Flowchart?node-id=0%3A1) to see the complete flowchart of the project (*realized with Figma*)
 [^3]: {'X-CMC_PRO_API_KEY': 'YOUR_COINMARKETCAP_API_KEY'} --> put your **private key** as ***'value'*** of 'X-CMC_PRO_API_KEY'
+[^4]: *integer >= 1 (default = 1)*
+[^5]: *integer [ 1 .. 5000 ] (default = 100)*
+[^6]: *valid values: "name""symbol" | "date_added" | "market_cap" | "market_cap_strict" | "price""circulating_supply" | "total_supply" | "max_supply" | "num_market_pairs" | "volume_24h""percent_change_1h" | "percent_change_24h" | "percent_change_7d" | "market_cap_by_total_supply_strict" | "volume_7d""volume_30d" (default = 'market_cap')*
