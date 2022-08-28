@@ -399,16 +399,18 @@ This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
         report_settings(report.conversion)
         time.sleep(standby)
 ```
-<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br />
 Our journey is come to an end.<br />
 I hope you enjoy my work!<br /><br />
 
 
-<br /><br /><br /><br />
 
 
 
-
+<a href="https://www.linkedin.com/in/alessio-nava/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091662-1562be4f-603d-483e-8cd0-d6fd034bd9cb.png" width="30" height="30"/></a>
+<a href="https://www.instagram.com/_novalex_/" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091653-fd2fed12-3776-4211-a8ef-49d10e33cec7.png" width="30" height="30"/></a>
+<a href="https://twitter.com/Novalex__" target="blank"><img align="left" src="https://user-images.githubusercontent.com/91788111/187091572-a0379d91-f0c5-40a0-abd3-cc72ca157b2f.png" width="30" height="30"/></a>
+<br />
 
 
 
