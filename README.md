@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Start2impact: Python project</h1>
-<h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API 🖥️</h3><br />
+<h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API 📈</h3><br />
 
 
 
@@ -90,9 +90,6 @@ It's time to move on to tasks and fetch data, grouping them according to the pro
 
 
 
-
-
-
 #### 1️⃣best volume 24h ($)
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91788111/187084522-24a8aabe-3890-4da9-af27-7cf03acc45ce.png" width="600" height="200"/>
@@ -112,7 +109,9 @@ It's time to move on to tasks and fetch data, grouping them according to the pro
         output = self.fetch_currencies_data()
         return output[0]
 ```
-<br />
+
+> Crypto with the $ largest volume of the last 24 hours
+
 Key data:<br />
 
 - ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
@@ -144,6 +143,9 @@ Key data:<br />
         output = self.fetch_currencies_data()
         return output
 ```
+
+> Best top 10 Crypto % increase in the last 24 hours
+
 ```python
     def worst_percent_increment_24h(self):
 
@@ -159,7 +161,9 @@ Key data:<br />
         output = self.fetch_currencies_data()
         return output
 ```
-<br />
+
+> Worst top 10 Crypto % increase in the last 24 hours
+
 Key data:<br />
 
 - ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
@@ -195,7 +199,9 @@ Key data:<br />
             amount += crypto["quote"]["USD"]["price"]
         return round(amount, 2)
 ```
-<br />
+
+> The amount of $ per unit of each top 20 Crypto
+
 Key data:<br />
 
 - ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
@@ -231,7 +237,9 @@ Key data:<br />
             amount += crypto["quote"]["USD"]["price"]
         return round(amount, 2)
 ```
-<br />
+
+> The amount of $ per unit of all Crypto in CoinMarketCap with a $76000000 threshold of minimum volume in the last 24h
+
 Key data:<br />
 
 - ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
@@ -271,7 +279,9 @@ Key data:<br />
         profit_loss = round(((today_amount - yesterday_amount) / yesterday_amount) * 100, 1)
         return profit_loss
 ```
-<br />
+
+> % Profit/loss buying one of each top 20 Crypto both today and yesterday (assuming the same rank)
+
 Key data:<br />
 
 - ***convert_id:*** Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to convert outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when convert is used.
@@ -288,7 +298,75 @@ Key data:<br />
 <img src="https://media.giphy.com/media/l0Iy7z476CjEV3G0w/giphy.gif"/>
 </p>
 
+<br />🤩<br />
+Yep! Data are now "packed".
+<br /><br />
+Finally it's possible to close data class ***GetCurrencies()***: let's create a function at its end to link all "mini reports" together into the final JSON ***(Python to JSON):***[^10]
 
+```python
+    def to_json(self):
+        #Python to JSON
+        json_report = {
+            "Top 20 market cap rank": self.top_twenty_market_cap_rank(),
+            "Best volume 24h": self.best_volume_24h(),
+            "Best % increment 24h": self.best_percent_increment_24h(),
+            "Worst % increment 24h": self.worst_percent_increment_24h(),
+            "$ per Top 20 Crypto": self.dollar_per_top_twenty(),
+            "$ per Crypto with 76.000.000 volume min threshold 24h": self.dollar_per_all(),
+            "Profit/loss timedelta = 1": self.profit_loss_yesterday()
+        }
+
+        return json_report
+```
+<br /><br />
+
+
+
+Last but not least: Create a function with *‘os.path’* module to build the complete JSON report ***(the file name is gonna be always as equal as the datetime.now() object)***...[^11]
+
+```python
+def report_settings(report):
+    # Function to create the complete JSON report (the file name is gonna be always as equal as the datetime.now() object)
+    file_name = time.strftime("CoinMarketCap_Report %Y-%m-%d.json", time.localtime())
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    destination_dir = os.path.join(script_dir, 'CoinMarketCap JSON Reports')
+    path = os.path.join(destination_dir, file_name)
+
+    ...
+```
+
+- file_name --> with datetime(), name file’s gonna be updated to current date and current time
+- script_dir --> using os.path.dirname, it will return the directory name of pathname path (a normalized absolutized version of the __file__ through os.path.abspath)
+- destination_dir --> create a directory where all JSONs are gonna add
+<br />
+
+
+...***(and, of course, create 📁 as well with 'os' module )***
+```python
+    ...
+
+    # Directory creation with 'os'
+    try:
+        os.makedirs(destination_dir)
+    except FileExistsError as e:
+        logging.exception("Unable to create a file, coz the file already exists: 'docs'")
+    with open(path, "w") as outfile:
+        json.dump(report, outfile, indent=4)
+```
+
+- **Try:** directory successfully created
+- **Except:** directory has already created... *pass*
+- **With:** JSON report creation within directory
+<br /><br />
+
+
+
+
+
+
+
+
+<h2>Display report overview🖥️</h2>
 
 
 
@@ -310,3 +388,5 @@ Key data:<br />
 [^7]: *valid values: "asc" | "desc"*
 [^8]: *number >= -100*
 [^9]: *number [ 0 .. 100000000000000000 ]*
+[^10]: *directly linked* --> self.conversion = self.to_json()
+[^11]: new function: it's out of **GetCurrencies()**
