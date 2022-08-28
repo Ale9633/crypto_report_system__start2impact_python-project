@@ -2,9 +2,9 @@
 <img src="https://user-images.githubusercontent.com/91788111/187063710-e977356b-a0ec-4f89-85f1-db087101ff3d.jpg" width="350" height="300"/>
 </p>
 
-
-# Start2impact: Python project
-### Create a Crypto reporting system, using CoinMarketCap’s API :desktop_computer:[^1]<br /><br />
+<h1 align="center">Start2impact: Python project</h1>
+<h3 align="center">Create a Crypto reporting system, using CoinMarketCap’s API :desktop_computer:[^1]</h3><br /><br />
+</h1>
 
 Every day, at a certain specific time, we wanna get as much information as possible about cryptocurrencies, process it and store the results in a JSON file.
 
