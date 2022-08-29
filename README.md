@@ -399,6 +399,9 @@ This is a li'l recap of your JSON Crypto-Report, based on CoinMarketCap API.\n
 
         report_settings(report.conversion)
         time.sleep(standby)
+
+if __name__ == "__main__":
+    display()
 ```
 <sub>*Click **[here](https://github.com/Ale9633/crypto_report_system__start2impact_python-project/blob/master/img/report_overview.png)** to see a screenshot of the code output*</sub>
 <br /><br /><br />
