@@ -336,9 +336,9 @@ def report_settings(report):
     ...
 ```
 
-- file_name --> with datetime(), name file’s gonna be updated to current date and current time
-- script_dir --> using os.path.dirname, it will return the directory name of pathname path (a normalized absolutized version of the __file__ through os.path.abspath)
-- destination_dir --> create a directory where all JSONs are gonna add
+- ***file_name*** --> with datetime(), name file’s gonna be updated to current date and current time
+- ***script_dir*** --> using os.path.dirname, it will return the directory name of pathname path (a normalized absolutized version of the __file__ through os.path.abspath)
+- ***destination_dir*** --> create a directory where all JSONs are gonna add
 <br />
 
 
@@ -355,9 +355,9 @@ def report_settings(report):
         json.dump(report, outfile, indent=4)
 ```
 
-- **Try:** directory successfully created
-- **Except:** directory has already created... *pass*
-- **With:** JSON report creation within directory
+- ***Try:*** directory successfully created
+- ***Except:*** directory has already created... *pass*
+- ***With:*** JSON report creation within directory
 <br /><br />
 
 
