@@ -407,8 +407,8 @@ if __name__ == "__main__":
 <br /><br /><br />
 **Our journey is come to an end.**<br />
 **I hope you enjoyed my work.
-<br /><br />Thnx for reading me!** 🙏🏼<br /><br />
-<br />***Ale***<br /><br />
+<br /><br /><br />Thnx for reading me!** 🙏🏼<br /><br />
+***Ale***<br /><br />
 
 
 
